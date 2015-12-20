@@ -38,11 +38,11 @@ def parse_date line_
 end
 
 def get_weight line
-  JSON.parse(line)["content"]["$t"].split(",")[0].split(": ")[1]
+  JSON.parse(line)["content"]["$t"].split(",")[0].split(": ")[1].to_f
 end
 
 def get_bmi line
-  JSON.parse(line)["content"]["$t"].split(",")[2].split(": ")[1]
+  JSON.parse(line)["content"]["$t"].split(",")[2].split(": ")[1].to_f
 end
 
 index = "fitbit_weight"
