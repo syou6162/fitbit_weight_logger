@@ -47,9 +47,9 @@ end
 
 index = "fitbit_weight"
 type = "log"
-`curl -XDELETE http://localhost:9200/#{index}`
+`curl -XDELETE http://localhost:9876/#{index}`
 
-`curl -XPUT localhost:9200/#{index} -d '{
+`curl -XPUT localhost:9876/#{index} -d '{
   "mappings": {
     "#{type}": {
       "properties": {
